@@ -74,3 +74,21 @@ Time: 832ms
 app.bundle.js  2.57 kB       0  [emitted]  app
    [0] ./src/app.js 74 bytes {0} [built]
 ```
+
+* If you look in `app.bundle.js` fiel that was created you are going to see a transpilation from ES6 to ES5 at the bottom of the file:
+
+```
+"use strict";
+
+
+var test = function test() {
+  return console.log('hi');
+};
+```
+
+* Create an `index.html` file in root
+* At the bottom fo the index.html `<script src="./build/app.bundle.js">`
+* Now in app.js add a line to `test();`
+* `npm run build`
+* Now look at index.html in a browser and the console should display "hi"
+* 

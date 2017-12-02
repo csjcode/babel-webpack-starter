@@ -73,6 +73,7 @@
 var test = function test() {
   return console.log('hi');
 };
+test();
 
 /***/ })
 /******/ ]);
