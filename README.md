@@ -114,3 +114,51 @@ import { person } from './lib';
 
 alert(person.city + ' ' + person.city);
 ```
+
+* back in lib.js we can add a function:
+
+```
+export function sayHello(name){
+    return `Hi ${name}`;
+}
+```
+
+* and in app.js:
+
+```
+import { person, sayHello } from './lib';
+
+alert(sayHello('Chris'));
+```
+
+* Next we are going over a new feature called async/await and add to app.js:
+
+```
+async function getPosts(params) {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+
+    const data = await response.json();
+    return data;
+}
+
+getPosts().then(posts=> console.log(posts));
+```
+* This by itself gives us an error - regenerator runtime undefined
+* To fix this we use the Babel polyfill
+* `npm install --save-dev babel-polyfill babel-preset-stage-0 `
+* Now in webpack.config we want to add `'babel-polyfill',`:
+
+```
+    entry: {
+        app: ['babel-polyfill','./src/app.js']
+    },
+```
+
+* And in presets add stage-0-preset `presets: ['env','stage-0']`
+
+* This should give us some objects in the console.
+
+```
+Array [ Object, Object, Object, Object, Object, Object, Object, 
+Object, Object, Object, 90 more… ]
+```

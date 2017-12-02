@@ -3,3 +3,7 @@ export const person = {
     location:"Miami",
     age:30
 }
+
+export function sayHello(name){
+    return `Hi ${name}`;
+}
