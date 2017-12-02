@@ -87,8 +87,13 @@ var test = function test() {
 ```
 
 * Create an `index.html` file in root
-* At the bottom fo the index.html `<script src="./build/app.bundle.js">`
+* At the bottom of the index.html `<script src="./build/app.bundle.js">`
 * Now in app.js add a line to `test();`
 * `npm run build`
 * Now look at index.html in a browser and the console should display "hi"
+
+* Now we can simplify this with Hot Module Reloading
+* Create a new script to run in `package.json` called `"start":"webpack-dev-server --output-public-path=/build/"`
+* `npm start`
+* You can now make HMR updated changes in app.js - it will be reloaded
 * 

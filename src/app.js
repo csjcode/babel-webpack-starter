@@ -1,2 +1,2 @@
-let test = () => console.log('hi');
-test();
+let test = () => console.log('whazzup');
+test(); 
