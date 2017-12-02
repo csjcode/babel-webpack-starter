@@ -156,9 +156,14 @@ getPosts().then(posts=> console.log(posts));
 
 * And in presets add stage-0-preset `presets: ['env','stage-0']`
 
-* This should give us some objects in the console.
+* This should give us some objects in the console when we visit our page at http://localhost:8080/.
 
 ```
 Array [ Object, Object, Object, Object, Object, Object, Object, 
 Object, Object, Object, 90 more… ]
 ```
+This script can be used to transpile ES2017 asyn/await code to ES2015 for older browsers.
+
+This can be used to fetch JSON and RSS data.
+
+That's it.
