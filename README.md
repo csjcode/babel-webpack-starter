@@ -96,4 +96,21 @@ var test = function test() {
 * Create a new script to run in `package.json` called `"start":"webpack-dev-server --output-public-path=/build/"`
 * `npm start`
 * You can now make HMR updated changes in app.js - it will be reloaded
-* 
+* The reason we are doing all this is to use different modules
+* Create a file `lib.js` and :
+
+```
+export const person = {
+    name:"John Doe",
+    location:"Miami",
+    age:30
+}
+```
+
+* Now in app.js:
+
+```
+import { person } from './lib';
+
+alert(person.city + ' ' + person.city);
+```
