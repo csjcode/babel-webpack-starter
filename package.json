@@ -1,0 +1,27 @@
+{
+  "name": "babel-webpack-starter",
+  "version": "1.0.0",
+  "description": "Experimenting with Webpack-Babel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csjcode/babel-webpack-starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csjcode/babel-webpack-starter/issues"
+  },
+  "homepage": "https://github.com/csjcode/babel-webpack-starter#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^3.9.1",
+    "webpack-dev-server": "^2.9.5"
+  }
+}
